@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo">Bookshelf</a>
+            </div>            
+        </nav>
+    </header>
+    <div class="section py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 d-flex align-items-center banner_content">
+                    <div>
+                        <h1>Bookshelf</h1>
+                        <h2>Temukan bacaan baru yang bagus dan bagikan rekomendasi buku.
+                            Terdapat beberapa rak buku virtual.
+                            Atur daftar buku yang ingin Anda baca maupun buku yang sudah Anda baca. 
+                        </h2>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 banner_content">
+                    <section class="input_section">
+                        <h2>Masukkan Buku Baru</h2>
+                        <form id="inputBook">
+                            <div class="input">
+                                <label for="inputBookTitle">Judul</label>
+                                <input id="inputBookTitle" type="text" required>
+                            </div>
+                            <div class="input">
+                                <label for="inputBookAuthor">Penulis</label>
+                                <input id="inputBookAuthor" type="text" required>
+                            </div>
+                            <div class="input">
+                                <label for="inputBookYear">Tahun</label>
+                                <input id="inputBookYear" type="number" required>
+                            </div>
+                            <div class="input_inline">
+                                <label for="inputBookIsComplete">Selesai dibaca</label>
+                                <input id="inputBookIsComplete" type="checkbox">
+                            </div>
+                            <button id="bookSubmit" type="submit"><span>Submit Buku</span></button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <section id="cariBuku"class="search_section">
+                <h2>Cari Buku</h2>
+                <form id="searchBook">
+                    <label for="searchBookTitle">Judul</label>
+                    <input id="searchBookTitle" type="text">
+                    <button id="searchSubmit" type="submit">Cari</button>
+                </form>
+                <div id="searchResult" class="book_list"></div>
+            </section>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="container">
+            <div id="listBuku"class="row book-list">
+                <div class="col-sm-12 col-lg-6 book-list-section">
+                    <section class="book_shelf">
+                        <h2>List Buku: Belum Dibaca</h2>
+                
+                        <div id="incompleteBookshelfList" class="book_list">
+                            <article class="book_item">
+                            </article>
+                        </div>
+                    </section>
+                </div>
+    
+                <div class="col-sm-12 col-lg-6 book-list-section">
+                    <section class="book_shelf">
+                        <h2>List Buku: Selesai Dibaca</h2>
+                
+                        <div id="completeBookshelfList" class="book_list">
+                            <article class="book_item">          
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+
+    <script src="assets/javascript/main.js"></script>
+    <script src="assets/javascript/swaplist.js"></script>
+</body>
+</html>
